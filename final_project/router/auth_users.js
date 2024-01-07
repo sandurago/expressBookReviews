@@ -58,7 +58,10 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
 
   if (books[bookNum]) {
     books[bookNum].reviews[username] = review;
-    return res.json(books[bookNum].reviews);
+    return res.status(200).json({
+      message: "Review added.",
+      reviews: books[bookNum].reviews
+    });
   }
 
   return res.json({ message: "Couldn't add review."});

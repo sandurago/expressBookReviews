@@ -102,21 +102,6 @@ public_users.get('/title/:title',function (req, res) {
     (book) => res.status(200).json(book),
     (err) => res.status(404).json({ message: "Title not found."})
   )
-
-  // const title = req.params.title;
-  // const keys = Object.keys(books);
-  // const length = keys.length;
-
-  // for (let i = 1; i < length; i++) {
-  //   const book = books[i];
-  //   let titleBook = book.title;
-  //   const bookConcat = titleBook.replace(/\s/g, '').toLowerCase();
-
-  //   if (title === bookConcat) {
-  //     return res.json(book);
-  //   }
-  // }
-  // return res.send({ message: "Title not found."});
 });
 
 //  Get book review
